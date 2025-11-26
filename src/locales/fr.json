@@ -171,12 +171,14 @@
         "notFound": {
             "title": "Page non trouvée",
             "message": "La page que vous recherchez n'existe pas ou a été déplacée.",
-            "backHome": "Retour à l'accueil"
+            "backHome": "Retour à l'accueil",
+            "back": "Retour à la page précédente"
         },
         "unauthorized": {
             "title": "Accès non autorisé",
             "message": "Vous n'avez pas les permissions nécessaires pour accéder à cette page.",
-            "backHome": "Retour à l'accueil"
+            "backHome": "Retour à l'accueil",
+            "back": "Retour à la page précédente"
         },
         "serverError": {
             "title": "Erreur serveur",

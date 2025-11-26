@@ -23,7 +23,7 @@ export function NotFound() {
                     </Link>
                     <Button variant="outline" onClick={() => window.history.back()}>
                         <ArrowLeft className="mr-2 h-4 w-4" />
-                        {t('errors.notFound.backHome')}
+                        {t('errors.notFound.back')}
                     </Button>
                 </div>
             </div>
