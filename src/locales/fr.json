@@ -1,0 +1,214 @@
+{
+    "header": {
+        "title": "Sekuu",
+        "courses": "Cours",
+        "login": "Se connecter",
+        "register": "S'inscrire",
+        "logout": "Se déconnecter",
+        "dashboard": "Dashboard",
+        "myCourses": "Mes cours"
+    },
+    "auth": {
+        "email": "Email",
+        "password": "Mot de passe",
+        "name": "Nom",
+        "required": "requis",
+        "login": {
+            "title": "Connexion",
+            "submit": "Se connecter",
+            "loading": "Connexion..."
+        },
+        "register": {
+            "submit": "S'inscrire",
+            "title": "Inscription"
+        }
+    },
+    "home": {
+        "hero": {
+            "title": "Apprenez à votre rythme avec nos formations en ligne",
+            "desc": "Accédez à des milliers de cours créés par des experts. Développez vos compétences et obtenez des certificats reconnus.",
+            "explore": "Explorer les cours",
+            "startFree": "Commencer gratuitement"
+        },
+        "features": {
+            "title": "Pourquoi nous choisir ?",
+            "desc": "Une plateforme complète pour votre apprentissage",
+            "quality": "Contenu de qualité",
+            "community": "Communauté active",
+            "certificates": "Certificats reconnus"
+        }
+    },
+    "course": {
+        "view": "Voir le cours",
+        "notFound": {
+            "title": "Cours non trouvé",
+            "desc": "Le cours que vous recherchez n'existe pas ou a été supprimé"
+        },
+        "backToCatalog": "Retour au catalogue",
+        "levels": {
+            "beginner": "Débutant",
+            "intermediate": "Intermédiaire",
+            "advanced": "Avancé"
+        },
+        "free": "Gratuit",
+        "continue": "Continuer le cours",
+        "enrolling": "Inscription...",
+        "enrollFree": "S'inscrire gratuitement",
+        "buyNow": "Acheter maintenant",
+        "includes": {
+            "title": "Ce cours comprend :",
+            "lessonsLabel": "leçons",
+            "accessForDays": "Accès pendant {{count}} jours",
+            "certificate": "Certificat de fin de formation",
+            "downloadable": "Ressources téléchargeables"
+        },
+        "tabs": {
+            "overview": "Vue d'ensemble",
+            "curriculum": "Programme",
+            "instructor": "Instructeur"
+        },
+        "cards": {
+            "whatYouWillLearn": "Ce que vous allez apprendre",
+            "prerequisites": "Prérequis",
+            "audience": "À qui s'adresse ce cours",
+            "programSoon": "Le programme sera bientôt disponible"
+        },
+        "stats": {
+            "students": "Étudiants",
+            "lessons": "Leçons",
+            "chapters": "Chapitres"
+        },
+        "catalog": {
+            "title": "Catalogue de cours",
+            "subtitle": "Découvrez nos formations et développez vos compétences",
+            "coursesFound": "{{count}} cours trouvé",
+            "coursesFoundPlural": "{{count}} cours trouvés",
+            "loadMore": "Charger plus de cours",
+            "loading": "Chargement...",
+            "error": "Une erreur est survenue lors du chargement des cours"
+        }
+    },
+    "pages": {
+        "comingSoon": {
+            "phase3": "Cette page sera implémentée dans la Phase 3",
+            "phase6": "Cette page sera implémentée dans la Phase 6",
+            "phase8": "Cette page sera implémentée dans la Phase 8",
+            "phase5": "Cette page sera implémentée dans la Phase 5",
+            "phase7": "Cette page sera implémentée dans la Phase 7"
+        }
+    },
+    "pagesTitles": {
+        "myPayments": "Mes Paiements",
+        "coursePlayer": "Lecteur de Cours",
+        "myCertificates": "Mes Certificats",
+        "instructorStudents": "Mes Étudiants",
+        "instructorRevenue": "Revenus",
+        "pendingGradings": "Évaluations en Attente",
+        "editCourse": "Modifier le Cours",
+        "createCourse": "Créer un Cours",
+        "forgotPassword": "Mot de passe oublié",
+        "adminUsers": "Gestion des Utilisateurs",
+        "adminSettings": "Paramètres",
+        "adminPayments": "Gestion des Paiements",
+        "adminCourses": "Gestion des Cours"
+    },
+    "courseMeta": {
+        "updated": "Mis à jour",
+        "statsTitle": "Statistiques"
+    },
+    "dashboard": {
+        "studentTitle": "Dashboard Étudiant",
+        "instructorTitle": "Dashboard Instructeur",
+        "adminTitle": "Dashboard Admin",
+        "welcomeBack": "Bienvenue, {{name}} !",
+        "overview": "Voici un aperçu de votre progression",
+        "activeCourses": "Cours actifs",
+        "enrolledCourses": "Sur {{count}} cours inscrits",
+        "completedCourses": "Cours terminés",
+        "completionRate": "{{rate}}% de complétion",
+        "noCompletedCourses": "Aucun cours terminé",
+        "certificates": "Certificats",
+        "certificatesEarned": "Certificats obtenus",
+        "totalTime": "Temps total",
+        "totalUsers": "Total utilisateurs",
+        "learningTime": "Temps d'apprentissage",
+        "continueLearning": "Continuer l'apprentissage",
+        "viewAll": "Voir tout",
+        "progress": "Progression",
+        "noActiveCourses": "Aucun cours en cours",
+        "enrollToStart": "Inscrivez-vous à un cours pour commencer",
+        "exploreCourses": "Explorer les cours",
+        "upcomingTests": "Prochains tests",
+        "questions": "questions",
+        "minutes": "min",
+        "start": "Commencer",
+        "noUpcomingTests": "Aucun test à venir",
+        "globalProgress": "Progression globale",
+        "averageProgress": "Moyenne de progression",
+        "progressMessage": "Vous avez complété en moyenne {{rate}}% de vos cours. Continuez ainsi !",
+        "totalRevenue": "Revenu total",
+        "totalStudents": "Total étudiants",
+        "activeInstructors": "Instructeurs actifs",
+        "totalCourses": "Total cours",
+        "recentActivity": "Activité récente",
+        "revenueOverview": "Aperçu des revenus",
+        "revenueTrend": "Tendance des revenus mensuels",
+        "userGrowth": "Croissance des utilisateurs",
+        "newRegistrations": "Nouvelles inscriptions",
+        "systemOverview": "Aperçu du système et indicateurs clés de performance",
+        "pendingApprovals": "{{count}} en attente d'approbation",
+        "activeStudents": "{{count}} étudiants actifs",
+        "creatingContent": "Création de contenu",
+        "fromLastMonth": "par rapport au mois dernier",
+        "averageRating": "Note moyenne",
+        "basedOnReviews": "Basé sur {{count}} avis",
+        "recentCourses": "Cours récents",
+        "createCourse": "Créer un cours"
+    },
+    "errors": {
+        "loginFailed": "Erreur lors de la connexion",
+        "registerFailed": "Erreur lors de l'inscription",
+        "notFound": {
+            "title": "Page non trouvée",
+            "message": "La page que vous recherchez n'existe pas ou a été déplacée.",
+            "backHome": "Retour à l'accueil"
+        },
+        "unauthorized": {
+            "title": "Accès non autorisé",
+            "message": "Vous n'avez pas les permissions nécessaires pour accéder à cette page.",
+            "backHome": "Retour à l'accueil"
+        },
+        "serverError": {
+            "title": "Erreur serveur",
+            "message": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard.",
+            "retry": "Réessayer"
+        }
+    },
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "myCourses": "Mes cours",
+        "createCourse": "Créer un cours",
+        "students": "Étudiants",
+        "pendingGradings": "Évaluations en attente",
+        "revenue": "Revenus",
+        "users": "Utilisateurs",
+        "courses": "Cours",
+        "payments": "Paiements",
+        "roles": "Roles & Permissions",
+        "settings": "Paramètres",
+        "certificates": "Certificats"
+    },
+    "footer": {
+        "tagline": "Votre plateforme d'apprentissage en ligne",
+        "platform": "Plateforme",
+        "catalog": "Catalogue de cours",
+        "becomeInstructor": "Devenir instructeur",
+        "support": "Support",
+        "helpCenter": "Centre d'aide",
+        "contact": "Contact",
+        "legal": "Légal",
+        "terms": "Conditions d'utilisation",
+        "privacy": "Politique de confidentialité",
+        "rights": "Tous droits réservés."
+    }
+}

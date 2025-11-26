@@ -1,0 +1,214 @@
+{
+    "header": {
+        "title": "Sekuu",
+        "courses": "Courses",
+        "login": "Log in",
+        "register": "Register",
+        "logout": "Log out",
+        "dashboard": "Dashboard",
+        "myCourses": "My courses"
+    },
+    "auth": {
+        "email": "Email",
+        "password": "Password",
+        "name": "Name",
+        "required": "required",
+        "login": {
+            "title": "Login",
+            "submit": "Sign in",
+            "loading": "Signing in..."
+        },
+        "register": {
+            "submit": "Register",
+            "title": "Register"
+        }
+    },
+    "home": {
+        "hero": {
+            "title": "Learn at your own pace with our online courses",
+            "desc": "Access thousands of courses created by experts. Grow your skills and earn recognized certificates.",
+            "explore": "Explore courses",
+            "startFree": "Start for free"
+        },
+        "features": {
+            "title": "Why choose us?",
+            "desc": "A complete platform for your learning",
+            "quality": "Quality content",
+            "community": "Active community",
+            "certificates": "Recognized certificates"
+        }
+    },
+    "course": {
+        "view": "View course",
+        "notFound": {
+            "title": "Course not found",
+            "desc": "The course you're looking for does not exist or has been removed"
+        },
+        "backToCatalog": "Back to catalog",
+        "levels": {
+            "beginner": "Beginner",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced"
+        },
+        "free": "Free",
+        "continue": "Continue course",
+        "enrolling": "Enrolling...",
+        "enrollFree": "Enroll for free",
+        "buyNow": "Buy now",
+        "includes": {
+            "title": "This course includes:",
+            "lessonsLabel": "lessons",
+            "accessForDays": "Access for {{count}} days",
+            "certificate": "Completion certificate",
+            "downloadable": "Downloadable resources"
+        },
+        "tabs": {
+            "overview": "Overview",
+            "curriculum": "Curriculum",
+            "instructor": "Instructor"
+        },
+        "cards": {
+            "whatYouWillLearn": "What you'll learn",
+            "prerequisites": "Prerequisites",
+            "audience": "Who this course is for",
+            "programSoon": "The curriculum will be available soon"
+        },
+        "stats": {
+            "students": "Students",
+            "lessons": "Lessons",
+            "chapters": "Chapters"
+        },
+        "catalog": {
+            "title": "Course Catalog",
+            "subtitle": "Discover our courses and develop your skills",
+            "coursesFound": "{{count}} course found",
+            "coursesFoundPlural": "{{count}} courses found",
+            "loadMore": "Load more courses",
+            "loading": "Loading...",
+            "error": "An error occurred while loading courses"
+        }
+    },
+    "pages": {
+        "comingSoon": {
+            "phase3": "This page will be implemented in Phase 3",
+            "phase6": "This page will be implemented in Phase 6",
+            "phase8": "This page will be implemented in Phase 8",
+            "phase5": "This page will be implemented in Phase 5",
+            "phase7": "This page will be implemented in Phase 7"
+        }
+    },
+    "pagesTitles": {
+        "myPayments": "My Payments",
+        "coursePlayer": "Course Player",
+        "myCertificates": "My Certificates",
+        "instructorStudents": "My Students",
+        "instructorRevenue": "Revenue",
+        "pendingGradings": "Pending Gradings",
+        "editCourse": "Edit Course",
+        "createCourse": "Create Course",
+        "forgotPassword": "Forgot Password",
+        "adminUsers": "User Management",
+        "adminSettings": "Settings",
+        "adminPayments": "Payments Management",
+        "adminCourses": "Courses Management"
+    },
+    "courseMeta": {
+        "updated": "Updated",
+        "statsTitle": "Statistics"
+    },
+    "dashboard": {
+        "studentTitle": "Student Dashboard",
+        "instructorTitle": "Instructor Dashboard",
+        "adminTitle": "Admin Dashboard",
+        "welcomeBack": "Welcome back, {{name}}!",
+        "overview": "Here is an overview of your progress",
+        "activeCourses": "Active Courses",
+        "enrolledCourses": "Out of {{count}} enrolled courses",
+        "completedCourses": "Completed Courses",
+        "completionRate": "{{rate}}% completion",
+        "noCompletedCourses": "No completed courses",
+        "certificates": "Certificates",
+        "certificatesEarned": "Certificates earned",
+        "totalTime": "Total Time",
+        "totalUsers": "Total Users",
+        "learningTime": "Learning time",
+        "continueLearning": "Continue Learning",
+        "viewAll": "View All",
+        "progress": "Progress",
+        "noActiveCourses": "No active courses",
+        "enrollToStart": "Enroll in a course to start",
+        "exploreCourses": "Explore Courses",
+        "upcomingTests": "Upcoming Tests",
+        "questions": "questions",
+        "minutes": "min",
+        "start": "Start",
+        "noUpcomingTests": "No upcoming tests",
+        "globalProgress": "Global Progress",
+        "averageProgress": "Average Progress",
+        "progressMessage": "You have completed an average of {{rate}}% of your courses. Keep it up!",
+        "totalRevenue": "Total Revenue",
+        "totalStudents": "Total Students",
+        "activeInstructors": "Active Instructors",
+        "totalCourses": "Total Courses",
+        "recentActivity": "Recent Activity",
+        "revenueOverview": "Revenue Overview",
+        "revenueTrend": "Monthly revenue trend",
+        "userGrowth": "User Growth",
+        "newRegistrations": "New user registrations",
+        "systemOverview": "System overview and key performance indicators",
+        "pendingApprovals": "{{count}} pending approval",
+        "activeStudents": "{{count}} active students",
+        "creatingContent": "Creating content",
+        "fromLastMonth": "from last month",
+        "averageRating": "Average Rating",
+        "basedOnReviews": "Based on {{count}} reviews",
+        "recentCourses": "Recent Courses",
+        "createCourse": "Create Course"
+    },
+    "errors": {
+        "loginFailed": "Error signing in",
+        "registerFailed": "Error registering",
+        "notFound": {
+            "title": "Page Not Found",
+            "message": "The page you're looking for doesn't exist or has been moved.",
+            "backHome": "Back to Home"
+        },
+        "unauthorized": {
+            "title": "Unauthorized Access",
+            "message": "You don't have permission to access this page.",
+            "backHome": "Back to Home"
+        },
+        "serverError": {
+            "title": "Server Error",
+            "message": "An unexpected error occurred. Please try again later.",
+            "retry": "Retry"
+        }
+    },
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "myCourses": "My Courses",
+        "createCourse": "Create Course",
+        "students": "Students",
+        "pendingGradings": "Pending Gradings",
+        "revenue": "Revenue",
+        "users": "Users",
+        "courses": "Courses",
+        "payments": "Payments",
+        "roles": "Roles & Permissions",
+        "settings": "Settings",
+        "certificates": "Certificates"
+    },
+    "footer": {
+        "tagline": "Your online learning platform",
+        "platform": "Platform",
+        "catalog": "Course Catalog",
+        "becomeInstructor": "Become Instructor",
+        "support": "Support",
+        "helpCenter": "Help Center",
+        "contact": "Contact",
+        "legal": "Legal",
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "rights": "All rights reserved."
+    }
+}

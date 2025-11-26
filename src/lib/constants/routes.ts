@@ -1,0 +1,48 @@
+// src/lib/constants/routes.ts
+export const ROUTES = {
+    // Public
+    HOME: '/',
+    COURSES: '/courses',
+    COURSE_DETAILS: '/courses/:slug',
+
+    // Auth
+    LOGIN: '/login',
+    REGISTER: '/register',
+    FORGOT_PASSWORD: '/forgot-password',
+    RESET_PASSWORD: '/reset-password',
+
+    // Dashboard (Unified)
+    DASHBOARD: '/dashboard',
+
+    // Common Protected
+    MY_COURSES: '/my-courses',
+    SETTINGS: '/settings',
+
+    // Student Specific
+    STUDENT_COURSE_PLAYER: '/courses/:id/play',
+    STUDENT_CERTIFICATES: '/certificates',
+    STUDENT_PAYMENTS: '/payments',
+    CHECKOUT: '/checkout/:courseId',
+
+    // Instructor Specific
+    INSTRUCTOR_CREATE_COURSE: '/courses/create',
+    INSTRUCTOR_EDIT_COURSE: '/courses/:id/edit',
+    INSTRUCTOR_STUDENTS: '/students',
+    INSTRUCTOR_PENDING_GRADINGS: '/gradings',
+    INSTRUCTOR_REVENUE: '/revenue',
+    INSTRUCTOR_TEST_BUILDER: '/tests/create',
+    INSTRUCTOR_TEST_EDIT: '/tests/:testId/edit',
+
+    // Admin Specific
+    ADMIN_USERS: '/users',
+    ADMIN_COURSES: '/admin/courses', // Keep admin prefix for admin course management to distinguish from my-courses? Or unify? Let's keep distinct for now or use /courses/manage
+    ADMIN_PAYMENTS: '/admin/payments',
+    ADMIN_ROLES: '/roles',
+
+    // Other
+    UNAUTHORIZED: '/unauthorized',
+    NOT_FOUND: '/404',
+} as const;
+
+export type RouteKey = keyof typeof ROUTES;
+export type RouteValue = typeof ROUTES[RouteKey];

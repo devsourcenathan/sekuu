@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Purple-themed modern color palette */
+        --background: 0 0% 100%;
+        --foreground: 262 10% 10%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 262 10% 10%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 262 10% 10%;
+
+        /* Primary: Vibrant Purple */
+        --primary: 262 52% 47%;
+        --primary-foreground: 0 0% 100%;
+
+        /* Secondary: Light Purple */
+        --secondary: 262 45% 90%;
+        --secondary-foreground: 262 52% 25%;
+
+        --muted: 262 20% 96%;
+        --muted-foreground: 262 10% 45%;
+
+        /* Accent: Electric Purple */
+        --accent: 270 60% 55%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 262 20% 90%;
+        --input: 262 20% 90%;
+        --ring: 262 52% 47%;
+
+        --radius: 1rem;
+
+        /* Custom design tokens */
+        --gradient-primary-start: 262 52% 47%;
+        --gradient-primary-end: 270 60% 55%;
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.3);
+    }
+
+    .dark {
+        --background: 262 20% 5%;
+        --foreground: 262 10% 98%;
+
+        --card: 262 15% 8%;
+        --card-foreground: 262 10% 98%;
+
+        --popover: 262 15% 8%;
+        --popover-foreground: 262 10% 98%;
+
+        /* Primary: Brighter purple for dark mode */
+        --primary: 270 60% 60%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 262 30% 15%;
+        --secondary-foreground: 262 20% 90%;
+
+        --muted: 262 25% 12%;
+        --muted-foreground: 262 15% 60%;
+
+        /* Accent: Luminous purple */
+        --accent: 270 65% 65%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 62.8% 50%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 262 25% 15%;
+        --input: 262 25% 15%;
+        --ring: 270 60% 60%;
+
+        /* Custom design tokens for dark mode */
+        --gradient-primary-start: 270 60% 60%;
+        --gradient-primary-end: 270 70% 70%;
+        --glass-bg: rgba(20, 10, 40, 0.7);
+        --shadow-glow: 0 0 30px rgba(167, 139, 250, 0.5);
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
