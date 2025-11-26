@@ -1,4 +1,4 @@
-import{R as I}from"./index-KtaUP583.js";import{M as x,C as A}from"./mixin-D3UDm--6.js";import{H as m}from"./hls-CELkTLgi.js";const H=e=>class extends e{static shadowRootOptions={...e.shadowRootOptions};static getTemplateHTML=(t,n={})=>{const{src:h,...E}=t;return`
+import{R as I}from"./index-axHZX-Ro.js";import{M as x,C as A}from"./mixin-D3UDm--6.js";import{H as m}from"./hls-CELkTLgi.js";const H=e=>class extends e{static shadowRootOptions={...e.shadowRootOptions};static getTemplateHTML=(t,n={})=>{const{src:h,...E}=t;return`
         <script type="application/json" id="config">
           ${JSON.stringify(n.config||{})}
         <\/script>
