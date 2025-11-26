@@ -144,16 +144,19 @@ export function AdminDashboard() {
                             {stats?.user_growth && stats.user_growth.length > 0 ? (
                                 <ResponsiveContainer width="100%" height="100%">
                                     <LineChart data={stats.user_growth}>
-                                        <CartesianGrid strokeDasharray="3 3" className="stroke-muted/30" />
+                                        <CartesianGrid
+                                            strokeDasharray="3 3"
+                                            className="stroke-muted/20"
+                                        />
                                         <XAxis
                                             dataKey="month"
-                                            stroke="hsl(var(--muted-foreground))"
+                                            // stroke="hsl(var(--muted-foreground))"
                                             fontSize={12}
                                             tickLine={false}
                                             axisLine={false}
                                         />
                                         <YAxis
-                                            stroke="hsl(var(--muted-foreground))"
+                                            // stroke="hsl(var(--muted-foreground))"
                                             fontSize={12}
                                             tickLine={false}
                                             axisLine={false}
@@ -162,7 +165,7 @@ export function AdminDashboard() {
                                         <Line
                                             type="monotone"
                                             dataKey="count"
-                                            stroke="hsl(var(--primary))"
+                                            // stroke="hsl(var(--primary))"
                                             strokeWidth={2}
                                             dot={false}
                                         />

@@ -8,6 +8,7 @@ import {
     CreditCard,
     Settings,
     Shield,
+    Package,
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants/routes';
 
@@ -31,6 +32,11 @@ export function AdminLayout({ children }: { children?: ReactNode }) {
             title: t('sidebar.courses'),
             href: ROUTES.ADMIN_COURSES,
             icon: BookOpen,
+        },
+        {
+            title: t('sidebar.packs'),
+            href: ROUTES.ADMIN_PACKS,
+            icon: Package,
         },
         {
             title: t('sidebar.payments'),

@@ -38,19 +38,27 @@ import { EditCourse } from '@/pages/instructor/EditCourse';
 import { InstructorStudents } from '@/pages/instructor/Students';
 import { PendingGradings } from '@/pages/instructor/PendingGradings';
 import { InstructorRevenue } from '@/pages/instructor/Revenue';
-import { TestBuilder } from '@/features/tests/components/TestBuilder';
 
 // Admin Pages
 import { AdminUsers } from '@/pages/admin/Users';
 import { AdminCourses } from '@/pages/admin/Courses';
 import { AdminPayments } from '@/pages/admin/Payments';
 import { AdminSettings } from '@/pages/admin/Settings';
+import { RolesPermissions } from '@/pages/admin/RolesPermissions';
+
+// Pack Pages
+import { PackCatalog } from '@/features/packs/pages/PackCatalog';
+import { PackDetails } from '@/features/packs/pages/PackDetails';
+import { MyPacks } from '@/features/packs/pages/MyPacks';
+import { InstructorPacks } from '@/features/packs/pages/InstructorPacks';
+import { AdminPacks } from '@/pages/admin/Packs';
+
 // Error Pages
 import { NotFound } from '@/pages/errors/NotFound';
 import { Unauthorized } from '@/pages/errors/Unauthorized';
+
 // Helper component for role-based rendering on same route
 import { useAuthStore } from '@/store/authStore';
-import { RolesPermissions } from '@/pages/admin/RolesPermissions';
 
 const RoleBasedComponent = ({ student, instructor, admin }: { student?: React.ReactNode, instructor?: React.ReactNode, admin?: React.ReactNode }) => {
     const { user } = useAuthStore();
@@ -66,6 +74,7 @@ const RoleBasedComponent = ({ student, instructor, admin }: { student?: React.Re
 
     return <Navigate to={ROUTES.UNAUTHORIZED} />;
 };
+
 export const router = createBrowserRouter([
     // Public routes
     {
@@ -83,6 +92,14 @@ export const router = createBrowserRouter([
             {
                 path: ROUTES.COURSE_DETAILS,
                 element: <CourseDetails />,
+            },
+            {
+                path: ROUTES.PACKS,
+                element: <PackCatalog />,
+            },
+            {
+                path: ROUTES.PACK_DETAILS,
+                element: <PackDetails />,
             },
         ],
     },
@@ -116,27 +133,6 @@ export const router = createBrowserRouter([
         path: ROUTES.DASHBOARD,
         element: (
             <ProtectedRoute>
-                {/* We need a layout that adapts or just use the switcher which renders the correct dashboard with its layout? 
-                     Actually, the dashboards likely use their own layouts. 
-                     Let's see: StudentDashboard uses? It seems they are just page components.
-                     The previous router wrapped them in layouts.
-                     So DashboardSwitcher should probably render the LAYOUT + Page, or we need a UnifiedLayout.
-                     
-                     Let's look at how it was:
-                     /student -> StudentLayout -> children
-                     
-                     So if I go to /dashboard, I want to render StudentLayout > StudentDashboard if I am a student.
-                     
-                     I will make DashboardSwitcher render the correct LAYOUT and the Dashboard Page as the outlet/child?
-                     No, DashboardSwitcher is an element.
-                     
-                     Let's try this:
-                     We can have specific routes that redirect to the unified ones, OR we just map the unified ones.
-                     
-                     If I am a student, /dashboard should show StudentDashboard inside StudentLayout.
-                     
-                     Let's define the routes structure such that /dashboard is handled by a component that decides.
-                  */}
                 <DashboardSwitcher />
             </ProtectedRoute>
         ),
@@ -158,6 +154,10 @@ export const router = createBrowserRouter([
             {
                 path: ROUTES.STUDENT_COURSE_PLAYER,
                 element: <CoursePlayer />,
+            },
+            {
+                path: ROUTES.MY_PACKS,
+                element: <MyPacks />,
             },
             {
                 path: ROUTES.STUDENT_CERTIFICATES,
@@ -202,6 +202,10 @@ export const router = createBrowserRouter([
                 element: <EditCourse />,
             },
             {
+                path: ROUTES.INSTRUCTOR_PACKS,
+                element: <InstructorPacks />,
+            },
+            {
                 path: ROUTES.INSTRUCTOR_STUDENTS,
                 element: <InstructorStudents />,
             },
@@ -221,14 +225,6 @@ export const router = createBrowserRouter([
             //     path: ROUTES.INSTRUCTOR_TEST_EDIT,
             //     element: <TestBuilder />,
             // },
-            // Instructor also has "My Courses" but maybe different view? 
-            // In previous router: /instructor/courses -> InstructorCourses
-            // Let's map it to /courses/manage or keep it distinct if needed. 
-            // But wait, ROUTES.MY_COURSES is /my-courses. 
-            // If I use the same path for both, I need a wrapper that decides which component to render?
-            // OR I can just use different paths for now to avoid collision if they are in the same router level.
-            // But the user wants "Role based routing without visible in url".
-            // So /my-courses should show StudentCourses for Student and InstructorCourses for Instructor.
         ],
     },
 
@@ -264,6 +260,10 @@ export const router = createBrowserRouter([
                 element: <AdminCourses />,
             },
             {
+                path: ROUTES.ADMIN_PACKS,
+                element: <AdminPacks />,
+            },
+            {
                 path: ROUTES.ADMIN_PAYMENTS,
                 element: <AdminPayments />,
             },
@@ -288,4 +288,3 @@ export const router = createBrowserRouter([
         element: <NotFound />,
     },
 ]);
-

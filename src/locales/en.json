@@ -187,6 +187,9 @@
     "sidebar": {
         "dashboard": "Dashboard",
         "myCourses": "My Courses",
+        "myPacks": "My Packs",
+        "browsePacks": "Browse Packs",
+        "packs": "Packs",
         "createCourse": "Create Course",
         "students": "Students",
         "pendingGradings": "Pending Gradings",

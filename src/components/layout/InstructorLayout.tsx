@@ -8,6 +8,7 @@ import {
     ClipboardCheck,
     DollarSign,
     Plus,
+    Package,
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants/routes';
 
@@ -26,6 +27,11 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
             title: t('sidebar.myCourses'),
             href: ROUTES.MY_COURSES,
             icon: BookOpen,
+        },
+        {
+            title: t('sidebar.myPacks'),
+            href: ROUTES.INSTRUCTOR_PACKS,
+            icon: Package,
         },
         {
             title: t('sidebar.createCourse'),

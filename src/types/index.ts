@@ -117,6 +117,7 @@ export interface Course {
     has_forum: boolean;
     instructor_id: number;
     instructor?: User;
+    chapters?: Chapter[];
     chapters_count?: number;
     lessons_count?: number;
     students_count?: number;
@@ -384,3 +385,7 @@ export interface AdminDashboardStats {
     top_courses: (Course & { enrollments_count: number })[];
     top_instructors: (User & { total_students: number })[];
 }
+
+// Pack Types
+export * from './pack.types';
+

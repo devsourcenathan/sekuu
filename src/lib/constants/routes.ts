@@ -24,9 +24,17 @@ export const ROUTES = {
     STUDENT_PAYMENTS: '/payments',
     CHECKOUT: '/checkout/:courseId',
 
+    // Packs
+    PACKS: '/packs',
+    PACK_DETAILS: '/packs/:slug',
+    MY_PACKS: '/my-packs',
+
     // Instructor Specific
     INSTRUCTOR_CREATE_COURSE: '/courses/create',
     INSTRUCTOR_EDIT_COURSE: '/courses/:id/edit',
+    INSTRUCTOR_PACKS: '/instructor/packs',
+    INSTRUCTOR_CREATE_PACK: '/instructor/packs/create',
+    INSTRUCTOR_EDIT_PACK: '/instructor/packs/:id/edit',
     INSTRUCTOR_STUDENTS: '/students',
     INSTRUCTOR_PENDING_GRADINGS: '/gradings',
     INSTRUCTOR_REVENUE: '/revenue',
@@ -35,7 +43,8 @@ export const ROUTES = {
 
     // Admin Specific
     ADMIN_USERS: '/users',
-    ADMIN_COURSES: '/admin/courses', // Keep admin prefix for admin course management to distinguish from my-courses? Or unify? Let's keep distinct for now or use /courses/manage
+    ADMIN_COURSES: '/admin/courses',
+    ADMIN_PACKS: '/admin/packs',
     ADMIN_PAYMENTS: '/admin/payments',
     ADMIN_ROLES: '/roles',
 

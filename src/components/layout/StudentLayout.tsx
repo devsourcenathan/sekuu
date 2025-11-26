@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { type ReactNode } from 'react';
 import { DashboardLayout } from './DashboardLayout';
-import { LayoutDashboard, BookOpen, Award, CreditCard } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Award, CreditCard, Package, Library } from 'lucide-react';
 import { ROUTES } from '@/lib/constants/routes';
 
 import { useTranslation } from 'react-i18next';
@@ -19,6 +19,16 @@ export function StudentLayout({ children }: { children?: ReactNode }) {
             title: t('sidebar.myCourses'),
             href: ROUTES.MY_COURSES,
             icon: BookOpen,
+        },
+        {
+            title: t('sidebar.myPacks'),
+            href: ROUTES.MY_PACKS,
+            icon: Package,
+        },
+        {
+            title: t('sidebar.browsePacks'),
+            href: ROUTES.PACKS,
+            icon: Library,
         },
         {
             title: t('sidebar.certificates'),
