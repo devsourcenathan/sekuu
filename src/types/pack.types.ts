@@ -144,3 +144,24 @@ export interface PackProgress {
         total_lessons: number;
     }>;
 }
+
+export interface AdminPackStatistics {
+    total_packs: number;
+    active_packs: number;
+    published_packs: number;
+    total_students: number;
+    total_revenue: number;
+    packs_by_month: Array<{
+        month: string;
+        count: number;
+    }>;
+    top_packs: Array<{
+        id: number;
+        title: string;
+        instructor: string;
+        students: number;
+        revenue: number;
+        courses: number;
+    }>;
+}
+

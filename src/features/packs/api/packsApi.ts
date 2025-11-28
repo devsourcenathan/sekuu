@@ -163,4 +163,57 @@ export const packsApi = {
     cancelPackEnrollment: async (id: number | string): Promise<void> => {
         return apiPost<void>(`/student/pack-enrollments/${id}/cancel`);
     },
+
+    // ===== ADMIN METHODS =====
+
+    /**
+     * Admin: Récupérer tous les packs avec filtres
+     */
+    getAdminPacks: async (filters?: {
+        search?: string;
+        instructor_id?: number;
+        status?: string;
+        sort_by?: string;
+        sort_order?: 'asc' | 'desc';
+        per_page?: number;
+    }): Promise<PaginatedResponse<Pack>> => {
+        const params = new URLSearchParams();
+
+        if (filters) {
+            Object.entries(filters).forEach(([key, value]) => {
+                if (value !== undefined && value !== null && value !== '') {
+                    params.append(key, String(value));
+                }
+            });
+        }
+
+        return apiGet<PaginatedResponse<Pack>>(
+            '/admin/packs',
+            Object.fromEntries(params)
+        );
+    },
+
+    /**
+     * Admin: Récupérer les statistiques globales des packs
+     */
+    getAdminPackStatistics: async (): Promise<any> => {
+        return apiGet<any>('/admin/packs/statistics');
+    },
+
+    /**
+     * Admin: Mettre à jour le statut d'un pack
+     */
+    updatePackStatus: async (
+        id: number | string,
+        isActive: boolean
+    ): Promise<Pack> => {
+        return apiPut<Pack>(`/admin/packs/${id}/status`, { is_active: isActive });
+    },
+
+    /**
+     * Admin: Supprimer définitivement un pack
+     */
+    forceDeletePack: async (id: number | string): Promise<void> => {
+        return apiDelete<void>(`/admin/packs/${id}/force`);
+    },
 };
