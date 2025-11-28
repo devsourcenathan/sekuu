@@ -6,6 +6,11 @@ export const login = async (credentials: { email: string; password: string }) =>
     return res.data;
 };
 
+export const getCurrentUser = async () => {
+    const res = await apiClient.get('/me');
+    return res.data;
+};
+
 export const logout = async () => {
     const res = await apiPost(ENDPOINTS.AUTH_LOGOUT)
     return res;
@@ -15,4 +20,4 @@ export const register = async (payload: any) => {
     return res.data;
 };
 
-export default { login, register, logout };
+export default { login, register, logout, getCurrentUser };

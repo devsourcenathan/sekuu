@@ -25,6 +25,7 @@ export function AdminLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.dashboard'),
                     href: ROUTES.DASHBOARD,
                     icon: LayoutDashboard,
+                    permission: 'analytics.view',
                 },
             ]
         },
@@ -35,11 +36,13 @@ export function AdminLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.users'),
                     href: ROUTES.ADMIN_USERS,
                     icon: Users,
+                    permission: 'users.view',
                 },
                 {
                     title: t('sidebar.roles'),
                     href: ROUTES.ADMIN_ROLES,
                     icon: Shield,
+                    permission: 'roles.manage',
                 },
             ]
         },
@@ -50,11 +53,13 @@ export function AdminLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.courses'),
                     href: ROUTES.ADMIN_COURSES,
                     icon: BookOpen,
+                    permission: 'courses.view',
                 },
                 {
                     title: t('sidebar.packs'),
                     href: ROUTES.ADMIN_PACKS,
                     icon: Package,
+                    permission: 'packs.view',
                 },
             ]
         },
@@ -65,6 +70,7 @@ export function AdminLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.payments'),
                     href: ROUTES.ADMIN_PAYMENTS,
                     icon: CreditCard,
+                    permission: 'payments.view',
                 },
             ]
         },

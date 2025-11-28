@@ -40,7 +40,7 @@ import { PendingGradings } from '@/pages/instructor/PendingGradings';
 import { InstructorRevenue } from '@/pages/instructor/Revenue';
 
 // Admin Pages
-import { AdminUsers } from '@/pages/admin/Users';
+// import { AdminUsers } from '@/pages/admin/Users';
 import { AdminCourses } from '@/pages/admin/Courses';
 import { AdminPayments } from '@/pages/admin/Payments';
 import { AdminSettings } from '@/pages/admin/Settings';
@@ -68,6 +68,7 @@ import LiveKitRoom from '@/pages/sessions/LiveKitRoom';
 
 // Helper component for role-based rendering on same route
 import { useAuthStore } from '@/store/authStore';
+import { UserPermissions } from '@/pages/admin/UserPermissions';
 
 const RoleBasedComponent = ({ student, instructor, admin }: { student?: React.ReactNode, instructor?: React.ReactNode, admin?: React.ReactNode }) => {
     const { user } = useAuthStore();
@@ -282,7 +283,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: ROUTES.ADMIN_USERS,
-                element: <AdminUsers />,
+                element: <UserPermissions />,
             },
             {
                 path: ROUTES.ADMIN_COURSES,

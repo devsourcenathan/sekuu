@@ -3,12 +3,14 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { type LucideIcon } from 'lucide-react';
+import { usePermissions } from '@/hooks/usePermissions';
 
 export interface SidebarNavItem {
     title: string;
     href: string;
     icon?: LucideIcon;
     disabled?: boolean;
+    permission?: string | string[]; // Required permission(s) to view this item
 }
 
 export interface SidebarNavGroup {
@@ -23,6 +25,15 @@ interface SidebarProps {
 
 export function Sidebar({ groups, isOpen }: SidebarProps) {
     const location = useLocation();
+    const { hasPermission } = usePermissions();
+
+    // Filter items based on permissions
+    const filteredGroups = groups.map(group => ({
+        ...group,
+        items: group.items.filter(item =>
+            !item.permission || hasPermission(item.permission)
+        )
+    })).filter(group => group.items.length > 0); // Remove empty groups
 
     return (
         <aside
@@ -33,7 +44,7 @@ export function Sidebar({ groups, isOpen }: SidebarProps) {
         >
             <ScrollArea className="h-full py-4">
                 <nav className="space-y-4 px-3">
-                    {Array.isArray(groups) && groups.map((group, groupIndex) => (
+                    {Array.isArray(filteredGroups) && filteredGroups.map((group, groupIndex) => (
                         <div key={groupIndex} className="space-y-0.5">
                             {/* Affiche le titre du groupe si présent */}
                             {group.title && (

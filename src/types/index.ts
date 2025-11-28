@@ -19,6 +19,7 @@ export interface User {
     phone?: string;
     email_verified_at?: string;
     roles: IRole[];
+    permissions?: string[]; // Array of permission slugs
     avatar?: string;
     created_at: string;
     updated_at: string;

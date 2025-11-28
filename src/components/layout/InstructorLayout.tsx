@@ -20,59 +20,6 @@ import { useTranslation } from 'react-i18next';
 export function InstructorLayout({ children }: { children?: ReactNode }) {
     const { t } = useTranslation();
 
-    // const sidebarItems = [
-    //     {
-    //         title: t('sidebar.dashboard'),
-    //         href: ROUTES.DASHBOARD,
-    //         icon: LayoutDashboard,
-    //     },
-    //     {
-    //         title: t('sidebar.myCourses'),
-    //         href: ROUTES.MY_COURSES,
-    //         icon: BookOpen,
-    //     },
-    //     {
-    //         title: t('sidebar.myPacks'),
-    //         href: ROUTES.INSTRUCTOR_PACKS,
-    //         icon: Package,
-    //     },
-    //     {
-    //         title: t('sidebar.createCourse'),
-    //         href: ROUTES.INSTRUCTOR_CREATE_COURSE,
-    //         icon: Plus,
-    //     },
-    //     {
-    //         title: t('sidebar.sessions'),
-    //         href: ROUTES.SESSIONS,
-    //         icon: Video,
-    //     },
-    //     {
-    //         title: t('sidebar.groups'),
-    //         href: ROUTES.GROUPS,
-    //         icon: UsersRound,
-    //     },
-    //     {
-    //         title: t('sidebar.meetingRequests'),
-    //         href: ROUTES.MEETING_REQUESTS,
-    //         icon: Calendar,
-    //     },
-    //     {
-    //         title: t('sidebar.students'),
-    //         href: ROUTES.INSTRUCTOR_STUDENTS,
-    //         icon: Users,
-    //     },
-    //     {
-    //         title: t('sidebar.pendingGradings'),
-    //         href: ROUTES.INSTRUCTOR_PENDING_GRADINGS,
-    //         icon: ClipboardCheck,
-    //     },
-    //     {
-    //         title: t('sidebar.revenue'),
-    //         href: ROUTES.INSTRUCTOR_REVENUE,
-    //         icon: DollarSign,
-    //     },
-    // ];
-
     const sidebarGroups = [
         {
             title: t('sidebar.groupsItems.overview'),
@@ -91,16 +38,19 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.myCourses'),
                     href: ROUTES.MY_COURSES,
                     icon: BookOpen,
+                    permission: 'courses.view',
                 },
                 {
                     title: t('sidebar.myPacks'),
                     href: ROUTES.INSTRUCTOR_PACKS,
                     icon: Package,
+                    permission: 'packs.view',
                 },
                 {
                     title: t('sidebar.createCourse'),
                     href: ROUTES.INSTRUCTOR_CREATE_COURSE,
                     icon: Plus,
+                    permission: 'courses.create',
                 },
             ]
         },
@@ -111,16 +61,19 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.sessions'),
                     href: ROUTES.SESSIONS,
                     icon: Video,
+                    permission: 'sessions.view',
                 },
                 {
                     title: t('sidebar.groups'),
                     href: ROUTES.GROUPS,
                     icon: UsersRound,
+                    permission: 'groups.view',
                 },
                 {
                     title: t('sidebar.meetingRequests'),
                     href: ROUTES.MEETING_REQUESTS,
                     icon: Calendar,
+                    permission: 'meeting-requests.view',
                 },
             ]
         },
@@ -131,16 +84,19 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
                     title: t('sidebar.students'),
                     href: ROUTES.INSTRUCTOR_STUDENTS,
                     icon: Users,
+                    permission: 'courses.view',
                 },
                 {
                     title: t('sidebar.pendingGradings'),
                     href: ROUTES.INSTRUCTOR_PENDING_GRADINGS,
                     icon: ClipboardCheck,
+                    permission: 'tests.evaluate',
                 },
                 {
                     title: t('sidebar.revenue'),
                     href: ROUTES.INSTRUCTOR_REVENUE,
                     icon: DollarSign,
+                    permission: 'payments.view',
                 },
             ]
         },
