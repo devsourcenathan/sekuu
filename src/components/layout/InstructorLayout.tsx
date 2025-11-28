@@ -75,7 +75,7 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
 
     const sidebarGroups = [
         {
-            title: t('sidebar.groupsItems.overview'), // "Vue d'ensemble"
+            title: t('sidebar.groupsItems.overview'),
             items: [
                 {
                     title: t('sidebar.dashboard'),
@@ -85,7 +85,7 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
             ]
         },
         {
-            title: t('sidebar.groupsItems.content'), // "Contenu"
+            title: t('sidebar.groupsItems.content'),
             items: [
                 {
                     title: t('sidebar.myCourses'),
@@ -105,7 +105,7 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
             ]
         },
         {
-            title: t('sidebar.groupsItems.sessionsGroups'), // "Sessions & Groupes"
+            title: t('sidebar.groupsItems.sessionsGroups'),
             items: [
                 {
                     title: t('sidebar.sessions'),
@@ -125,7 +125,7 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
             ]
         },
         {
-            title: t('sidebar.groupsItems.management'), // "Gestion"
+            title: t('sidebar.groupsItems.management'),
             items: [
                 {
                     title: t('sidebar.students'),

@@ -2,7 +2,7 @@ import { type ReactNode } from 'react';
 import { SidebarIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useUiStore } from '@/store/uiStore';
-import { Sidebar, type SidebarNavGroup, type SidebarNavItem } from './Sidebar';
+import { Sidebar, type SidebarNavGroup } from './Sidebar';
 import { Header } from './Header';
 import { cn } from '@/lib/utils';
 
