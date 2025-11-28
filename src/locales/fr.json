@@ -193,6 +193,11 @@
         "browsePacks": "Parcourir les packs",
         "packs": "Packs",
         "createCourse": "Créer un cours",
+        "sessions": "Sessions",
+        "groups": "Groupes",
+        "meetingRequests": "Demandes de rencontre",
+        "mySessions": "Mes sessions",
+        "requestMeeting": "Demander une rencontre",
         "students": "Étudiants",
         "pendingGradings": "Évaluations en attente",
         "revenue": "Revenus",
@@ -201,7 +206,21 @@
         "payments": "Paiements",
         "roles": "Roles & Permissions",
         "settings": "Paramètres",
-        "certificates": "Certificats"
+        "certificates": "Certificats",
+        "groupsItems": {
+            "overview": "Vue d'ensemble",
+            "userManagement": "Gestion des utilisateurs",
+            "contentManagement": "Gestion du contenu",
+            "finance": "Finance",
+            "system": "Système",
+            "account": "Compte",
+            "sessions": "Sessions",
+            "learning": "Apprentissage",
+            "meetingRequests": "Demandes de rencontre",
+            "content": "Contenu",
+            "sessionsGroups": "Sessions & Groupes",
+            "management": "Gestion"
+        }
     },
     "footer": {
         "tagline": "Votre plateforme d'apprentissage en ligne",

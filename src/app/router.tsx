@@ -57,6 +57,15 @@ import { AdminPacks } from '@/pages/admin/Packs';
 import { NotFound } from '@/pages/errors/NotFound';
 import { Unauthorized } from '@/pages/errors/Unauthorized';
 
+// Session Pages
+import SessionsManagement from '@/pages/instructor/SessionsManagement';
+import GroupsManagement from '@/pages/instructor/GroupsManagement';
+import MeetingRequests from '@/pages/instructor/MeetingRequests';
+import MySessions from '@/pages/student/MySessions';
+import RequestMeeting from '@/pages/student/RequestMeeting';
+import WaitingRoom from '@/pages/sessions/WaitingRoom';
+import LiveKitRoom from '@/pages/sessions/LiveKitRoom';
+
 // Helper component for role-based rendering on same route
 import { useAuthStore } from '@/store/authStore';
 
@@ -171,6 +180,14 @@ export const router = createBrowserRouter([
                 path: 'tests/:testId/take',
                 element: <TestTaking />,
             },
+            {
+                path: ROUTES.MY_SESSIONS,
+                element: <MySessions />,
+            },
+            {
+                path: ROUTES.REQUEST_MEETING,
+                element: <RequestMeeting />,
+            },
         ],
     },
 
@@ -216,6 +233,18 @@ export const router = createBrowserRouter([
             {
                 path: ROUTES.INSTRUCTOR_REVENUE,
                 element: <InstructorRevenue />,
+            },
+            {
+                path: ROUTES.SESSIONS,
+                element: <SessionsManagement />,
+            },
+            {
+                path: ROUTES.GROUPS,
+                element: <GroupsManagement />,
+            },
+            {
+                path: ROUTES.MEETING_REQUESTS,
+                element: <MeetingRequests />,
             },
             // {
             //     path: ROUTES.INSTRUCTOR_TEST_BUILDER,
@@ -276,6 +305,24 @@ export const router = createBrowserRouter([
                 element: <AdminSettings />,
             },
         ],
+    },
+
+    // Session Room Routes (Protected but not layout-specific)
+    {
+        path: ROUTES.SESSION_WAITING_ROOM,
+        element: (
+            <ProtectedRoute>
+                <WaitingRoom />
+            </ProtectedRoute>
+        ),
+    },
+    {
+        path: ROUTES.SESSION_ROOM,
+        element: (
+            <ProtectedRoute>
+                <LiveKitRoom />
+            </ProtectedRoute>
+        ),
     },
 
     // Error routes

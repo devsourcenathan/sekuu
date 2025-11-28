@@ -8,7 +8,7 @@ export const AuthLayout = () => {
 
     // Redirect if already authenticated
     if (isAuthenticated) {
-        return <Navigate to={ROUTES.STUDENT_DASHBOARD} replace />;
+        return <Navigate to={ROUTES.DASHBOARD} replace />;
     }
 
     return (

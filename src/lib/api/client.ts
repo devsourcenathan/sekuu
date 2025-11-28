@@ -149,11 +149,13 @@ export async function apiPatch<T = any>(
 
 // DELETE request
 export async function apiDelete<T = any>(
-    url: string
+    url: string,
+    data?: any
 ): Promise<T> {
     return apiRequest<T>({
         method: 'DELETE',
         url,
+        data,
     });
 }
 

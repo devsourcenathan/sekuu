@@ -2,22 +2,22 @@ import { type ReactNode } from 'react';
 import { SidebarIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useUiStore } from '@/store/uiStore';
-import { Sidebar, type SidebarNavItem } from './Sidebar';
+import { Sidebar, type SidebarNavGroup, type SidebarNavItem } from './Sidebar';
 import { Header } from './Header';
 import { cn } from '@/lib/utils';
 
 interface DashboardLayoutProps {
     children: ReactNode;
-    sidebarItems: SidebarNavItem[];
+    sidebarGroups: SidebarNavGroup[];
 }
 
-export function DashboardLayout({ children, sidebarItems }: DashboardLayoutProps) {
+export function DashboardLayout({ children, sidebarGroups }: DashboardLayoutProps) {
     const { sidebarOpen, toggleSidebar } = useUiStore();
 
     return (
         <div className="min-h-screen bg-background">
             <Header />
-            <Sidebar items={sidebarItems} isOpen={sidebarOpen} />
+            <Sidebar groups={sidebarGroups} isOpen={sidebarOpen} />
 
             <div
                 className={cn(

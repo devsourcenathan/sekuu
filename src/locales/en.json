@@ -193,6 +193,11 @@
         "browsePacks": "Browse Packs",
         "packs": "Packs",
         "createCourse": "Create Course",
+        "sessions": "Sessions",
+        "groups": "Groups",
+        "meetingRequests": "Meeting Requests",
+        "mySessions": "My Sessions",
+        "requestMeeting": "Request Meeting",
         "students": "Students",
         "pendingGradings": "Pending Gradings",
         "revenue": "Revenue",
@@ -201,7 +206,21 @@
         "payments": "Payments",
         "roles": "Roles & Permissions",
         "settings": "Settings",
-        "certificates": "Certificates"
+        "certificates": "Certificates",
+        "groupsItems": {
+            "overview": "Overview",
+            "userManagement": "User Management",
+            "contentManagement": "Content Management",
+            "finance": "Finance",
+            "system": "System",
+            "account": "Account",
+            "sessions": "Sessions",
+            "learning": "Learning",
+            "meetingRequests": "Meeting Requests",
+            "content": "Content",
+            "sessionsGroups": "Sessions & Groups",
+            "management": "Management"
+        }
     },
     "footer": {
         "tagline": "Your online learning platform",
