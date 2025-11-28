@@ -1,14 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as authApi from "../../features/auth/api/authApi";
 import { useTranslation } from 'react-i18next';
 import { useAuthStore } from "@/store/authStore";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { Label } from "../ui/label";
 
 type FormValues = {
     name: string;
     email: string;
     password: string;
+    password_confirmation: string;
 };
 
 export const RegisterForm: React.FC = () => {
@@ -35,25 +39,33 @@ export const RegisterForm: React.FC = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-full max-w-md">
             <div>
-                <label className="block text-sm font-medium">{t('auth.name')}</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" {...register("name", { required: true })} />
+                <Label className="block text-sm font-medium">{t('auth.name')}</Label>
+                <Input className="mt-1 w-full border rounded px-3 py-2" {...register("name", { required: true })} />
                 {errors.name && <div className="text-sm text-red-600">{t('auth.required')}</div>}
             </div>
 
             <div>
-                <label className="block text-sm font-medium">{t('auth.email')}</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" {...register("email", { required: true })} type="email" />
+                <Label className="block text-sm font-medium">{t('auth.email')}</Label>
+                <Input className="mt-1 w-full border rounded px-3 py-2" {...register("email", { required: true })} type="email" />
                 {errors.email && <div className="text-sm text-red-600">{t('auth.required')}</div>}
             </div>
 
             <div>
-                <label className="block text-sm font-medium">{t('auth.password')}</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" {...register("password", { required: true })} type="password" />
+                <Label className="block text-sm font-medium">{t('auth.password')}</Label>
+                <Input className="mt-1 w-full border rounded px-3 py-2" {...register("password", { required: true })} type="password" />
                 {errors.password && <div className="text-sm text-red-600">{t('auth.required')}</div>}
+            </div>
+            <div>
+                <Label className="block text-sm font-medium">{t('auth.passwordConfirmation')}</Label>
+                <Input className="mt-1 w-full border rounded px-3 py-2" {...register("password_confirmation", { required: true })} type="password" />
+                {errors.password_confirmation && <div className="text-sm text-red-600">{t('auth.required')}</div>}
             </div>
 
             <div>
-                <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded">{t('auth.register.submit')}</button>
+                <Button disabled={formState.isSubmitting} type="submit" className="px-4 py-2 bg-primary text-white rounded">{t('auth.register.submit')}</Button>
+            </div>
+            <div>
+                <Link className="text-primary hover:underline cursor-pointer " to="/login">{t('auth.register.login')}</Link>
             </div>
         </form>
     );

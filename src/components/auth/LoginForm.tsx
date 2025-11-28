@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useLogin from "../../features/auth/hooks/useLogin";
 import { useTranslation } from 'react-i18next';
 import { Button } from "../ui/button";
@@ -57,17 +57,14 @@ export const LoginForm: React.FC = () => {
                     type="submit"
                     disabled={loading}
                     variant={"outline"}
-                    className="cursor-pointer"
+                    className="px-4 py-2 bg-primary text-white rounded cursor-pointer"
                 >
                     {loading ? t('auth.login.loading') : t('auth.login.submit')}
                 </Button>
-                {/* <button
-                    type="submit"
-                    className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-                    disabled={loading}
-                >
-                    {loading ? t('auth.login.loading') : t('auth.login.submit')}
-                </button> */}
+            </div>
+
+            <div>
+                <Link className="text-primary hover:underline cursor-pointer " to="/register">{t('auth.login.register')}</Link>
             </div>
         </form>
     );

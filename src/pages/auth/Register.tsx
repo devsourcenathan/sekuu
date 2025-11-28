@@ -1,4 +1,3 @@
-import React from "react";
 import RegisterForm from "../../components/auth/RegisterForm";
 import { useTranslation } from 'react-i18next';
 

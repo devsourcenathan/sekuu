@@ -11,16 +11,19 @@
     "auth": {
         "email": "Email",
         "password": "Mot de passe",
+        "passwordConfirmation": "Confirmation du mot de passe",
         "name": "Nom",
         "required": "requis",
         "login": {
             "title": "Connexion",
             "submit": "Se connecter",
-            "loading": "Connexion..."
+            "loading": "Connexion...",
+            "register": "Vous n'avez pas de compte ? Inscrivez-vous"
         },
         "register": {
             "submit": "S'inscrire",
-            "title": "Inscription"
+            "title": "Inscription",
+            "login": "Vous avez déjà un compte ? Connectez-vous"
         }
     },
     "home": {
