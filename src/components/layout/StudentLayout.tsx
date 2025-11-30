@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { type ReactNode } from 'react';
 import { DashboardLayout } from './DashboardLayout';
-import { LayoutDashboard, BookOpen, Award, CreditCard, Package, Library, Video, Calendar } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Award, CreditCard, Package, Library, Video, Calendar, Settings } from 'lucide-react';
 import { ROUTES } from '@/lib/constants/routes';
 
 import { useTranslation } from 'react-i18next';

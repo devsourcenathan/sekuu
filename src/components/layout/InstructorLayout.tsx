@@ -12,6 +12,7 @@ import {
     Video,
     UsersRound,
     Calendar,
+    Settings,
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants/routes';
 
@@ -97,6 +98,11 @@ export function InstructorLayout({ children }: { children?: ReactNode }) {
                     href: ROUTES.INSTRUCTOR_REVENUE,
                     icon: DollarSign,
                     permission: 'payments.view',
+                },
+                {
+                    title: t('sidebar.settings'),
+                    href: ROUTES.SETTINGS,
+                    icon: Settings,
                 },
             ]
         },

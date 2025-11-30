@@ -41,27 +41,27 @@ export const ROUTES = {
     INSTRUCTOR_TEST_BUILDER: '/tests/create',
     INSTRUCTOR_TEST_EDIT: '/tests/:testId/edit',
 
-
-
-    // Admin Specific
-    ADMIN_USERS: '/users',
-    ADMIN_COURSES: '/admin/courses',
-    ADMIN_PACKS: '/admin/packs',
-    ADMIN_PAYMENTS: '/admin/payments',
-    ADMIN_ROLES: '/roles',
-
-    // Sessions (LiveKit)
-    SESSIONS: '/sessions',
-    SESSION_WAITING_ROOM: '/sessions/:id/waiting-room',
-    SESSION_ROOM: '/sessions/:id/room',
-    MY_SESSIONS: '/my-sessions',
     REQUEST_MEETING: '/request-meeting',
     GROUPS: '/groups',
     MEETING_REQUESTS: '/meeting-requests',
 
+    // Admin Specific
+    ADMIN_USERS: '/users',
+    ADMIN_ROLES: '/roles',
+    ADMIN_COURSES: '/courses',
+    ADMIN_PACKS: '/packs',
+    ADMIN_PAYMENTS: '/payments',
+    ADMIN_SETTINGS: '/settings',
+
     // Other
     UNAUTHORIZED: '/unauthorized',
     NOT_FOUND: '/404',
+
+    SESSIONS: '/sessions',
+    SESSION_WAITING_ROOM: '/sessions/:id/waiting-room',
+    SESSION_ROOM: '/sessions/:id/room',
+    MY_SESSIONS: '/my-sessions',
+
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;

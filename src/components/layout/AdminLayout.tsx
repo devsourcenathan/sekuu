@@ -79,9 +79,14 @@ export function AdminLayout({ children }: { children?: ReactNode }) {
             items: [
                 {
                     title: t('sidebar.settings'),
-                    href: ROUTES.SETTINGS,
+                    href: ROUTES.ADMIN_SETTINGS,
                     icon: Settings,
                 },
+                // {
+                //     title: t('sidebar.profile'), // "Profil"
+                //     href: ROUTES.SETTINGS,
+                //     icon: Users,
+                // },
             ]
         },
     ];

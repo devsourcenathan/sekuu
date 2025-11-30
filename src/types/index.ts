@@ -23,6 +23,8 @@ export interface User {
     avatar?: string;
     created_at: string;
     updated_at: string;
+    preferred_currency?: string;
+    bio?: string;
 }
 
 export type UserRole = 'super_admin' | 'admin' | 'instructor' | 'student';

@@ -43,8 +43,9 @@ import { InstructorRevenue } from '@/pages/instructor/Revenue';
 // import { AdminUsers } from '@/pages/admin/Users';
 import { AdminCourses } from '@/pages/admin/Courses';
 import { AdminPayments } from '@/pages/admin/Payments';
-import { AdminSettings } from '@/pages/admin/Settings';
+// import { AdminSettings } from '@/pages/admin/Settings';
 import { RolesPermissions } from '@/pages/admin/RolesPermissions';
+import Settings from '@/pages/admin/Settings';
 
 // Pack Pages
 import { PackCatalog } from '@/features/packs/pages/PackCatalog';
@@ -302,10 +303,20 @@ export const router = createBrowserRouter([
                 element: <RolesPermissions />,
             },
             {
-                path: ROUTES.SETTINGS, // Admin settings
-                element: <AdminSettings />,
+                path: ROUTES.ADMIN_SETTINGS, // Admin settings
+                element: <Settings />,
             },
         ],
+    },
+
+    // User Settings Route (Protected for all authenticated users)
+    {
+        path: ROUTES.SETTINGS,
+        element: (
+            <ProtectedRoute>
+                <Settings />
+            </ProtectedRoute>
+        ),
     },
 
     // Session Room Routes (Protected but not layout-specific)

@@ -30,6 +30,9 @@ export const ENDPOINTS = {
     INSTRUCTOR: {
         DASHBOARD: "/instructor/dashboard",
         MY_COURSES: "/instructor/dashboard/courses",
+        EARNINGS: '/instructor/earnings',
+        PAYOUT_SETTINGS: '/instructor/payout-settings',
+        REQUEST_PAYOUT: '/instructor/request-payout',
     },
     CHAPTERS: {
         BY_COURSE: (courseId: number | string) => `/courses/${courseId}/chapters`,
@@ -70,6 +73,26 @@ export const ENDPOINTS = {
         BY_COURSE: (courseId: number | string) => `/courses/${courseId}/tests`,
         BY_CHAPTER: (chapterId: number | string) => `/chapters/${chapterId}/tests`,
         BY_LESSON: (lessonId: number | string) => `/lessons/${lessonId}/tests`,
+    },
+    CURRENCY: {
+        RATES: (base: string) => `/currency/rates/${base}`,
+        CONVERT: '/currency/convert',
+        UPDATE_PREFERENCE: '/user/settings/currency',
+    },
+    PAYMENT_METHODS: {
+        LIST: '/payment-methods',
+        CREATE: '/payment-methods',
+        DELETE: (id: number) => `/payment-methods/${id}`,
+        SET_DEFAULT: (id: number) => `/payment-methods/${id}/default`,
+    },
+    USER_SETTINGS: {
+        UPDATE_PROFILE: '/user/profile',
+        UPDATE_PASSWORD: '/user/password',
+    },
+    LEGAL: {
+        GET_BY_SLUG: (slug: string) => `/legal/${slug}`,
+        ADMIN_LIST: '/admin/legal',
+        ADMIN_UPSERT: (slug: string) => `/admin/legal/${slug}`,
     },
 };
 
