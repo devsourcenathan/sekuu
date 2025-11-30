@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 
 interface SessionCardProps {
     session: Session;
+    onEdit?: (session: Session) => void;
+    onManageParticipants?: (session: Session) => void;
 }
 
 const statusColors = {
@@ -24,7 +26,7 @@ const typeLabels = {
     meeting: 'Meeting',
 };
 
-export function SessionCard({ session }: SessionCardProps) {
+export function SessionCard({ session, onEdit, onManageParticipants }: SessionCardProps) {
     const navigate = useNavigate();
     const isUpcoming = new Date(session.datetime_start) > new Date();
     const isActive = session.status === 'in_progress';
@@ -87,16 +89,33 @@ export function SessionCard({ session }: SessionCardProps) {
                 </div>
             </CardContent>
 
-            <CardFooter className="flex gap-2">
+            <CardFooter className="flex gap-2 flex-wrap">
                 {isActive && (
                     <Button onClick={handleJoin} className="w-full">
                         Rejoindre
                     </Button>
                 )}
                 {isUpcoming && session.status === 'scheduled' && (
-                    <Button variant="outline" className="w-full">
-                        Modifier
-                    </Button>
+                    <>
+                        {onEdit && (
+                            <Button
+                                variant="outline"
+                                className="flex-1"
+                                onClick={() => onEdit(session)}
+                            >
+                                Modifier
+                            </Button>
+                        )}
+                        {onManageParticipants && (
+                            <Button
+                                variant="outline"
+                                className="flex-1"
+                                onClick={() => onManageParticipants(session)}
+                            >
+                                Participants
+                            </Button>
+                        )}
+                    </>
                 )}
             </CardFooter>
         </Card>

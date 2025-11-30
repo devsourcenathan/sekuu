@@ -5,9 +5,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useSessions } from '@/features/sessions/hooks/useSessions';
 import { SessionCard } from '@/features/sessions/components/SessionCard';
 import { CreateSessionDialog } from '@/features/sessions/components/CreateSessionDialog';
+import { EditSessionDialog } from '@/features/sessions/components/EditSessionDialog';
+import { ManageSessionParticipantsDialog } from '@/features/sessions/components/ManageSessionParticipantsDialog';
+import type { Session } from '@/features/sessions/types';
 
 export default function SessionsManagement() {
     const [isCreateOpen, setIsCreateOpen] = useState(false);
+    const [editingSession, setEditingSession] = useState<Session | null>(null);
+    const [managingParticipantsSession, setManagingParticipantsSession] = useState<Session | null>(null);
     const [activeTab, setActiveTab] = useState('upcoming');
 
     const { data: upcomingSessions, isLoading: loadingUpcoming } = useSessions({
@@ -52,7 +57,12 @@ export default function SessionsManagement() {
                     ) : (
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                             {upcomingSessions?.data?.map((session) => (
-                                <SessionCard key={session.id} session={session} />
+                                <SessionCard
+                                    key={session.id}
+                                    session={session}
+                                    onEdit={(s) => setEditingSession(s)}
+                                    onManageParticipants={(s) => setManagingParticipantsSession(s)}
+                                />
                             ))}
                         </div>
                     )}
@@ -68,7 +78,11 @@ export default function SessionsManagement() {
                     ) : (
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                             {pastSessions?.data?.map((session) => (
-                                <SessionCard key={session.id} session={session} />
+                                <SessionCard
+                                    key={session.id}
+                                    session={session}
+                                    onEdit={(s) => setEditingSession(s)}
+                                />
                             ))}
                         </div>
                     )}
@@ -84,7 +98,11 @@ export default function SessionsManagement() {
                     ) : (
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                             {allSessions?.data?.map((session) => (
-                                <SessionCard key={session.id} session={session} />
+                                <SessionCard
+                                    key={session.id}
+                                    session={session}
+                                    onEdit={(s) => setEditingSession(s)}
+                                />
                             ))}
                         </div>
                     )}
@@ -92,6 +110,22 @@ export default function SessionsManagement() {
             </Tabs>
 
             <CreateSessionDialog open={isCreateOpen} onOpenChange={setIsCreateOpen} />
+
+            {editingSession && (
+                <EditSessionDialog
+                    open={!!editingSession}
+                    onOpenChange={(open) => !open && setEditingSession(null)}
+                    session={editingSession}
+                />
+            )}
+
+            {managingParticipantsSession && (
+                <ManageSessionParticipantsDialog
+                    open={!!managingParticipantsSession}
+                    onOpenChange={(open) => !open && setManagingParticipantsSession(null)}
+                    session={managingParticipantsSession}
+                />
+            )}
         </div>
     );
 }
